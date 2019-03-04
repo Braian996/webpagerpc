@@ -1,0 +1,55 @@
+.rc-main {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.rc-container-title-head {
+  position: relative;
+  padding-top: 0;
+  min-height: 700px;
+  height: 100vh;
+  text-align: center;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.rc-bg-image {
+  z-index: -1;
+}
+
+.rc-bg-image, .rc-bg-image>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.rc-title-head {
+  height: 100%;
+  min-height: 700px;
+  display: table;
+  width: 100%;
+}
+
+.rc-title-x1 {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 60px 0;
+}
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rc-title {
+  line-height: 1.1;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
