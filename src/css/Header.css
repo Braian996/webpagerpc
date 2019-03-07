@@ -1,4 +1,4 @@
-nav {
+header nav {
   width: 100%;
   background-color: transparent;
   padding: 10px 80px;
@@ -9,7 +9,26 @@ nav {
   left: 0;
 }
 
-nav .logo {
+header nav.menu-effect-actived {
+  background: rgba(28, 28, 29, 0.9);
+  height: 100px;
+  padding: 10px 80px;
+}
+
+header nav.menu-effect-actived .menu-colorx2 * {
+  color: #bfbfbf;
+}
+
+header nav.menu-effect-actived .link-activex2 {
+  color: #f6f6f6;
+  border-bottom: 2px solid white;
+}
+
+header nav.menu-effect-actived .menu-colorx2 *:hover {
+  color: #f6f6f6;
+}
+
+header nav .logo {
   padding: 22px 20px;
   height: 80px;
   float: left;
@@ -18,16 +37,15 @@ nav .logo {
   cursor: pointer;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   float: right;
   display: flex;
   margin: 0;
 }
 
-nav ul li * {
+header nav ul li * {
   line-height: 80px;
-  color: #bfbfbf;
   padding: 12px 30px;
   text-decoration: none;
   text-transform: uppercase;
@@ -39,6 +57,28 @@ nav ul li * {
   font-weight: 600;
 }
 
-nav ul li *:hover {
+.menu-colorx1 * {
+  color: #bfbfbf;
+}
+
+.menu-colorx1 *:hover {
   color: #f6f6f6;
+}
+
+.menu-colorx2 * {
+  color: #767676;
+}
+
+.menu-colorx2 *:hover {
+  color: #0f0f0f;
+}
+
+.link-active {
+  color: #f6f6f6;
+  border-bottom: 2px solid white;
+}
+
+.link-activex2 {
+  color: #303232;
+  border-bottom: 2px solid #303232;
 }

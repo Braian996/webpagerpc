@@ -1,0 +1,32 @@
+footer {
+  position: relative;
+  background-color: #ddd;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 15px;
+  color: #767676;
+}
+
+.rc-footer-content {
+  padding: 44px 0 26px;
+}
+
+.rc-footer-social {
+  margin-bottom: 12px;
+}
+
+.rc-social-media {
+  list-style: none;
+  margin: 0;
+}
+
+.rc-social-media > li {
+  display: inline-block;
+}
+
+.rc-social-media li a {
+  color: #767676;
+  font-size: 18px;
+  padding: 3px 8px;
+}
+

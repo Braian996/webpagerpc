@@ -18,6 +18,97 @@ body, .rc-main {
   font-size: 3.4em;
 }
 
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.rc-row {
+  width: 100%;
+  height: auto;
+}
+
+.rc-relative-position {
+  position: relative;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.margin-top-100 {
+  margin-top: 100px;
+}
+
+.rc-text-center {
+  text-align: center!important;
+}
+
+.rc-titlex2-content {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.rc-titlex2 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.rc-text-center-title {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rc-text-left-title {
+  float: left;
+  margin-left: 220px;
+}
+
+.rc-text-right-title {
+  margin-right: 220px;
+  float: right;
+}
+
+.borderx5 {
+  border-bottom: 5px solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.rc-x1-col {
+  width: 47%;
+  float: left;
+  padding: 0 10px;
+}
+
+.rc-x2-col {
+  width: 100%;
+  padding: 0 110px;
+}
+
+.imageBGoverlay {
+  background-color: rgba(12, 12, 12, .6);
+}
+
+/*******************
+********************
+***   Images ***
+********************
+********************/
+
+.image4 {
+  background-image: url('../img/4.jpg')
+}
+
+.image5 {
+  background-image: url('../img/5.jpg')
+}
+
 /***********
 *** Responsive ***
 ************/
@@ -26,5 +117,7 @@ body, .rc-main {
   .wrap {
     width: 1140px;
     max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

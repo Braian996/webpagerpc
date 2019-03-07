@@ -7,9 +7,7 @@ import PropTypes from 'prop-types'
 // Containers
 import Header from '../container/Header'
 import Content from '../container/Content'
-
-// Data
-import menu from '../data/menu'
+import Footer from '../container/Footer'
 
 // Assets
 import '../css/App.css';
@@ -26,8 +24,9 @@ class App extends Component {
 
     return ( 
       <div className = "App" >
-        <Header items = {menu}/>
+        <Header />
         <Content body= {children} />
+        <Footer />
       </div>
     )
   }
