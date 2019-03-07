@@ -1,0 +1,23 @@
+.rc-container-text {
+  width: auto;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border-bottom-color: rgb(41, 43, 45);
+}
+
+.rc-image {
+  width: 100%;
+  max-width: 100%;
+  height: 380px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.rc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
