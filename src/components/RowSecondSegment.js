@@ -19,7 +19,9 @@ const rowSecondSegment = (props) => {
               </div>
             </div>
             <div className="rc-x1-col">
-              {props.parrafo}
+              <div>
+                {props.parrafo}
+              </div>
             </div>
           </div>
         </div>  

@@ -8,6 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  transition: .2s ease;
 }
 
 body, .rc-main {
@@ -91,8 +92,25 @@ a {
   padding: 0 110px;
 }
 
+.rc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .imageBGoverlay {
   background-color: rgba(12, 12, 12, .6);
+}
+
+button * {
+  cursor: pointer;
+}
+
+.button-color-grey {
+  background-color: rgba(56, 64, 64, 1);
+  color: #fff;
 }
 
 /*******************
@@ -120,4 +138,21 @@ a {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+/******** ANIMATIONS & EFFECTS ***********/
+
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
 }

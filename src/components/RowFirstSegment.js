@@ -12,7 +12,9 @@ const rowFirstSegment = (props) => {
         <div className="wrap">
           <div style={{display: 'table'}}>
             <div className="rc-x1-col">
-              {props.parrafo}
+              <div>
+                {props.parrafo}
+              </div>
             </div>
             <div className="rc-x1-col">
               <div>
