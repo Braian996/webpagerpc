@@ -12,17 +12,19 @@ const rowThirdSegment = (props) => {
         <div className="wrap">
           <div style={{display: 'table'}}>
             <div className="rc-x2-col">
-              Lorem ipsum dolor sit amet consectetur 
-              adipisicing elit. Magni, laborum! Sit 
-              repellat dicta, quae nostrum autem facere 
-              nulla est accusantium quaerat debitis 
-              reiciendis odit exercitationem corrupti! 
-              Dolor accusantium repellendus eligendi.
-              Lorem ipsum dolor sit amet consectetur, adipisicing 
-              elit. Molestias rerum odio nemo alias repellat, 
-              voluptates, hic tempore nobis aut consequatur 
-              fugiat sed optio. Nihil sapiente quam nobis 
-              veritatis? Iure, adipisci?
+              <div>
+                Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Magni, laborum! Sit 
+                repellat dicta, quae nostrum autem facere 
+                nulla est accusantium quaerat debitis 
+                reiciendis odit exercitationem corrupti! 
+                Dolor accusantium repellendus eligendi.
+                Lorem ipsum dolor sit amet consectetur, adipisicing 
+                elit. Molestias rerum odio nemo alias repellat, 
+                voluptates, hic tempore nobis aut consequatur 
+                fugiat sed optio. Nihil sapiente quam nobis 
+                veritatis? Iure, adipisci?
+              </div>
               {props.children}
             </div>
           </div>

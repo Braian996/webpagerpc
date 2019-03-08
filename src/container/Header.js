@@ -37,27 +37,35 @@ class Header extends Component {
     ],
     styleClass: 'menu-colorx1',
     activeLinkeffect: 'link-active',
+    pathBefore: '',
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll, false)
     const pathName = window.location.pathname
-    if (pathName === '/nosotros') {
-      let styleClass = ''
-      let activeLinkeffect = ''
-      const newData = this.state.menu.map(item => {
-        if (item.id === 3) {
-          item.active = true
-        } else {
-          item.active = false
-        }
+    this.setState({ pathBefore: pathName })
+    const menuLinkActive = this.state.menu.filter(item => {
+      return item.url === pathName
+    })
+    if (menuLinkActive[0].id === 2 || menuLinkActive[0].id === 3 || menuLinkActive[0].id === 4) {
+      const styleClass = 'menu-colorx2'
+      const activeLinkeffect = 'link-activex2'
+      this.setState({ styleClass, activeLinkeffect })
+    }
+  }
 
-        return item
+  componentDidUpdate() {
+    if (this.state.pathBefore !== window.location.pathname) {
+      this.setState({ pathBefore: window.location.pathname })
+      const currentPath = window.location.pathname
+      const menuLinkActive = this.state.menu.filter(item => {
+        return item.url === currentPath
       })
-
-      styleClass = 'menu-colorx2'
-      activeLinkeffect = 'link-activex2'
-      this.setState({ menu: newData, styleClass, activeLinkeffect })
+      if (menuLinkActive[0].id === 2 || menuLinkActive[0].id === 3 || menuLinkActive[0].id === 4) {
+        const styleClass = 'menu-colorx2'
+        const activeLinkeffect = 'link-activex2'
+        this.setState({ styleClass, activeLinkeffect })
+      }
     }
   }
 
@@ -78,16 +86,6 @@ class Header extends Component {
     const idLink = parseInt(event.target.id)
     let styleClass = ''
     let activeLinkeffect = ''
-    const newData = this.state.menu.map(item => {
-      if (item.id === idLink) {
-        item.active = true
-      } else {
-        item.active = false
-      }
-
-      return item
-    })
-
     if (idLink === 3) {
       styleClass = 'menu-colorx2'
       activeLinkeffect = 'link-activex2'
@@ -95,7 +93,7 @@ class Header extends Component {
       styleClass = 'menu-colorx1'
       activeLinkeffect = 'link-active'
     }
-    this.setState({ menu: newData, styleClass, activeLinkeffect })
+    this.setState({ styleClass, activeLinkeffect })
   }
 
   render () {
@@ -108,12 +106,12 @@ class Header extends Component {
           <ul>
             {menu.map((item) => {
               const linkMarkUp = item.active ? (
-                <NavLink to={item.url} className={activeLinkeffect} id={item.id} 
-                onClick={event => this.activeLinkMenu(event)}>
+                <NavLink exact to={item.url} activeClassName={activeLinkeffect} 
+                id={item.id} onClick={(event) => this.activeLinkMenu(event)}>
                 {item.title}</NavLink>
               ) : (
-                <NavLink to={item.url}
-                onClick={event => this.activeLinkMenu(event)} id={item.id}>
+                <NavLink to={item.url} activeClassName={activeLinkeffect}
+                id={item.id} onClick={(event) => this.activeLinkMenu(event)}>
                 {item.title}</NavLink>
               )
               return (
