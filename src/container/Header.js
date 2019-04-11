@@ -5,36 +5,13 @@ import { NavLink } from 'react-router-dom'
 // Assets
 import '../css/Header.css'
 
+// data
+import menu from '../data/menu'
+
 class Header extends Component {
 
   state = {
     effectMenu: '',
-    menu: [
-      {
-        title: 'Inicio',
-        url: '/',
-        active: true,
-        id: 1,
-      },
-      {
-        title: 'Servicios',
-        url: '/servicios',
-        active: false,
-        id: 2,
-      },
-      {
-        title: 'Nosotros',
-        url: '/nosotros',
-        active: false,
-        id: 3,
-      },
-      {
-        title: 'Contactos',
-        url: '/contactos',
-        active: false,
-        id: 4,
-      }
-    ],
     styleClass: 'menu-colorx1',
     activeLinkeffect: 'link-active',
     pathBefore: '',
@@ -44,7 +21,7 @@ class Header extends Component {
     window.addEventListener('scroll', this.handleScroll, false)
     const pathName = window.location.pathname
     this.setState({ pathBefore: pathName })
-    const menuLinkActive = this.state.menu.filter(item => {
+    const menuLinkActive = menu.filter(item => {
       return item.url === pathName
     })
     if (menuLinkActive[0].id === 2 || menuLinkActive[0].id === 3 || menuLinkActive[0].id === 4) {
@@ -58,7 +35,7 @@ class Header extends Component {
     if (this.state.pathBefore !== window.location.pathname) {
       this.setState({ pathBefore: window.location.pathname })
       const currentPath = window.location.pathname
-      const menuLinkActive = this.state.menu.filter(item => {
+      const menuLinkActive = menu.filter(item => {
         return item.url === currentPath
       })
       if (menuLinkActive[0].id === 2 || menuLinkActive[0].id === 3 || menuLinkActive[0].id === 4) {
@@ -97,7 +74,7 @@ class Header extends Component {
   }
 
   render () {
-    const { effectMenu, menu, styleClass, activeLinkeffect } = this.state
+    const { effectMenu, styleClass, activeLinkeffect } = this.state
 
     return (
       <header>

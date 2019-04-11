@@ -5,7 +5,7 @@ const coverPage = (props) => {
   return (
     <div className="rc-container-title-head">
       <div className="rc-bg-image">
-        <div style={props.imagen}></div>
+        <div style={props.imageProp}></div>
         <div className="imageBGoverlay"></div>
       </div>
       <div className="rc-title-head">

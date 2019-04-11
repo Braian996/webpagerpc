@@ -16,6 +16,11 @@ import '../css/Footer.css'
 
 
 class Home extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
   goToNosotrosPage = () => {
     this.props.history.push('/nosotros')
   }
@@ -34,14 +39,14 @@ class Home extends Component {
 
     return (
       <div className="rc-main">
-        <CoverPage imagen={imageBG} />
-        <RowThirdSegment title="Nosotros" estiloCss="rc-text-center-title">
+        <CoverPage imageProp={imageBG} />
+        <RowThirdSegment title="Nosotros" styleClass="rc-text-center-title">
           <ButtonFlat handleClick={() => this.goToNosotrosPage()}>
             <label>Leer más</label>
             {icono}
           </ButtonFlat>
         </RowThirdSegment>
-        <ImageCover imagen={image01} />
+        <ImageCover imageProp={image01} />
       </div>
     )
   }

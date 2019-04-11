@@ -1,7 +1,7 @@
 export default [
     {
       title: '¿Quiénes Somos?',
-      parrafo: `Lorem ipsum dolor sit amet consectetur 
+      paragraph: `Lorem ipsum dolor sit amet consectetur 
       adipisicing elit. Corrupti sequi, ipsum expedita 
       maiores unde iste ipsa id officia pariatur 
       ullam quae rem voluptatem architecto doloremque 
@@ -14,7 +14,7 @@ export default [
     },
     {
       title: 'Nuestras Metas',
-      parrafo: `Lorem ipsum dolor sit amet consectetur 
+      paragraph: `Lorem ipsum dolor sit amet consectetur 
       adipisicing elit. Corrupti sequi, ipsum expedita 
       maiores unde iste ipsa id officia pariatur 
       ullam quae rem voluptatem architecto doloremque 
