@@ -15,7 +15,7 @@ import './css/index.css';
 
 
 render(
-  <Router>
+  <Router onUpdate={() => window.scrollTo(0, 0)}>
     <AppRoutes />
   </Router>,
   document.getElementById('root')

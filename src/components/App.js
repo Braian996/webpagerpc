@@ -25,7 +25,7 @@ class App extends Component {
     return ( 
       <div className = "App" >
         <Header />
-        <Content body= {children} />
+        <Content body = {children} />
         <Footer />
       </div>
     )

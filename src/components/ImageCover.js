@@ -13,7 +13,7 @@ const cssImage = {
 const imageCover = (props) => {
   return (
     <div className="rc-row rc-relative-position">
-      <div style={{...props.imagen, ...cssImage}} className="rc-relative-position">
+      <div style={{...props.imageProp, ...cssImage}} className="rc-relative-position">
         <div className="rc-overlay imageBGoverlay"></div>
       </div>
     </div>

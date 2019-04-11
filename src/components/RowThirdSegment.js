@@ -7,7 +7,7 @@ import SubTitle from './SubTitle'
 const rowThirdSegment = (props) => {
   return (
     <div className="rc-row rc-relative-position margin-bottom-50">
-      <SubTitle title={props.title} estiloCss={props.estiloCss} />
+      <SubTitle title={props.title} styleClass={props.styleClass} />
       <div className="rc-row">
         <div className="wrap">
           <div style={{display: 'table'}}>
